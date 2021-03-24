@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+/* すべての画面を最初は表示しない */
+.view {
+  display: none;
+}
+
+body{
+  background-color: #fff7f7;
+}
+#hobby-template {
+  display: none;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #6BFFBB;
+}
+
+
+#header ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    flex-grow:4;
+    text-align: center;
+}
+
+#header ul li{
+    display: inline-block;
+    text-align: center;
+    padding:20px 10px 0px 15px;
+    color: black;
+}
+
+#header ul li a{
+  color: black;
+}
+
+
+#logo {
+  display: inline-block;
+  background-color: #6BFFBB;
+}
+
+
+#logo a{
+   text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding:5px 20px 5px 10px;
+}
+
+.add-button {
+  text-decoration: none;
+  color: #f5587b;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow:3;
+  text-align: center;
+}
+.add-button:hover {
+  text-decoration: none;
+  color: #e41749;
+}
+.add-button:focus {
+  text-decoration: none;
+}
+
+
+
+
+#main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#hobby-list {
+  margin: 20px auto;
+}
+
+.hobby-item {
+  width: 270px;
+  margin: 15px;
+  float: left;
+  background-color: white;
+
+}
+
+.hobby-item__image-wrapper {
+  width: 270px;
+  height: 270px;
+ 
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hobby-item__image {
+  max-height: 250px;
+  max-width: 250px;
+  vertical-align: middle;
+}
+
+.hobby-item__detail {
+  padding: 10px;
+  background-color: #fafafa;
+  border-top: solid 1px #ddd;
+}
+
+.hobby-item__title {
+  margin: 0 auto;
+  height: 36px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hobby-item__delete-wrapper {
+  margin-top: 5px;
+  text-align: right;
+}
+
+.hobby-item__delete {
+  color: #dc3545;
+  background-color: transparent;
+  border-color: #dc3545;
+}
+.hobby-item__delete:hover {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+.hobby-item__delete:focus {
+  outline-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+
+#add-hobby__help {
+  display: none;
+}
+
+.custom-file-label::after {
+  content: "参照";
+}
+
+
+#footer {
+  width: 100%;
+  height: 30px;
+  margin: 0 auto;
+    background-color:  #6BFFBB;
+    text-align: center;
+}
+
+
+.navbar{
+  flex-grow:2;
+}
+
+@media(max-width:575px){
+  .hobby-item__image-wrapper{
+    display:block; 
+    margin-top: 30px;
+  }
+.head{
+  text-align: center;
+  margin: 0 auto;
+}
+#main{
+  text-align: center;
+}
+.hobby-item{
+clear: both;
+clear: left;
+     margin-left: auto;
+  margin-right: auto;
+  float: none;
+}  
+#hobby-template{
+ text-align: center;
+}
+#header{
+  display: block;
+  height: auto;
+
+}
+.add-button{
+  display: block;
+   margin-left: auto;
+  margin-right: auto;
+}
+
+.hobby-item__image-wrapper{
+  margin-left: auto;
+  margin-right: auto;
+}
+.hobby-item__image {
+    margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.wrapper{
+  margin-left: auto;
+  margin-right: auto;
+}
+#hobby-list{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+#logo{
+  width: 100%;
+}
+#logo a{
+  display: block;
+}
+.modal-content{
+  width: 100%;
+  clear: both;
+  max-width: inherit;
+  margin:auto;
+}
+}
+
+
+

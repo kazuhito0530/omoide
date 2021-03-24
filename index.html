@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ORIGINAL</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <section id="shelf" class="view">
+    <header>
+      <div id="header">
+        <div id="logo">
+        <a href="./index.html" class="head"><i class="far fa-address-card" ></i>思い出</a>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <ul id="right">
+              <li class="nav-item current"><a href="index.html">HOME</a></li>
+              <li class="nav-item"><a href="course.html">使い方</a></li>
+              <li class="nav-item"><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+             </nav>
+        <a href="#add-hobby-modal" data-toggle="modal" class="add-button">
+          <i class="fas fa-plus-circle" aria-hidden="true"></i>
+          画像の追加
+        </a>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div id="main">
+        <div id="hobby-list" class="clearfix"></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="hobby-template">
+
+    <div class="hobby-item">
+      <div class="hobby-item__image-wrapper"><img class="hobby-item__image" alt=""></div>
+      <div class="hobby-item__detail">
+        <div class="hobby-item__title"></div>
+        <div class="hobby-item__delete-wrapper">
+          <button class="btn btn-danger hobby-item__delete">
+            <i class="fas fa-trash-alt" aria-hidden="true"></i>
+            削除
+          </button>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <!-- モーダル -->
+  <div id="add-hobby-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">画像の登録</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body m-1">
+          <form id="hobby-form">
+            <div class="form-group row">
+              <label for="add-hobby-title" class="col-md-3  col-form-label">タイトル</label>
+              <div class="col-md-9">
+                <input id="add-hobby-title" type="text" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-3">表紙画像</div>
+              <div class="col-md-9">
+                <div class="custom-file">
+                  <input id="add-hobby-image" type="file" accept=".jpg,.jpeg,.png,.gif, image/jpeg,image/png,image/gif"
+                    class="custom-file-input" required>
+                  <label id="add-hobby-image-label" class="custom-file-label" for="add-hobby-image">ファイルを選択</label>
+                </div>
+              </div>
+            </div>
+            <div id="add-hobby__help" class="alert alert-danger"></div>
+            <button id="submit_add_hobby" type="submit" class="btn btn-default btn-success btn-block">
+              保存
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+     <footer id="footer">
+        &copy; 2021/2 First Original Inc.
+    </footer>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+
+  <script>
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyB6xl2vpVpfyH-V5oLBBGSGhZAKZk1M49E",
+  authDomain: "realtime-chat-8254b.firebaseapp.com",
+  databaseURL: "https://realtime-chat-8254b-default-rtdb.firebaseio.com",
+  projectId: "realtime-chat-8254b",
+  storageBucket: "realtime-chat-8254b.appspot.com",
+};
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="main.js"></script>
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+</body>
+
+</html>
